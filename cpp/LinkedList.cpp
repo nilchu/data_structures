@@ -37,6 +37,13 @@ namespace nilchu {
         LinkedList(Node* root) {
             this->root = root;
         }
+        ~LinkedList() {
+            while(root != nullptr) {
+                Node* temp = root;
+                root = root->next;
+                delete temp;
+            }
+        }
         public:
         void push(int data) override {
             Node* new_node = new Node();
@@ -46,7 +53,10 @@ namespace nilchu {
         };
 
         void pop() override {
+            // Does not work as expected
+            Node* temp = this->root;
             this->root = this->root->next;
+            delete temp;
         };
 
         void add(int data) override {
@@ -65,11 +75,11 @@ namespace nilchu {
 
         void remove(int data) override {
             Node* n = this->root;
-            
+            // Does not work as expected
             while(n->next->data != data) {
                 n = n->next;
             }
-
+            
             n->next = n->next->next;
         };
 

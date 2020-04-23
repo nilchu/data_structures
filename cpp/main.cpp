@@ -10,11 +10,14 @@ int main() {
     ll.push(3);
     ll.push(2);
     ll.push(1);
+    ll.push(0);
 
 
     ll.printList();
     PRINT("------------------");
     ll.pop();
+    //ll.pop();
+    //ll.pop();
     ll.printList();
     PRINT("------------------");
     ll.add(10);
