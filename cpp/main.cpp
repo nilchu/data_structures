@@ -25,4 +25,10 @@ int main() {
     ll.remove(3);
     ll.remove(10);
     ll.printList();
+    PRINT("------------------");
+
+    Deque* dq = new LinkedList();
+    dq->push(1000);
+    dq->printList();
+    
 };

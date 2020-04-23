@@ -7,12 +7,14 @@ namespace nilchu {
         public:
             virtual void push(int data) {};
             virtual void pop() {};
+            virtual void printList() {};
     };
 
     class Queue {
         public:
             virtual void add(int data) {};
             virtual void remove(int data) {};
+            virtual void printList() {};
     };
 
     class Node {
@@ -67,7 +69,7 @@ namespace nilchu {
             n->next = n->next->next;
         };
 
-        void printList() {
+        void printList() override {
             Node* n = this->root;
             while(n != NULL) {
                 PRINT(n->data);
