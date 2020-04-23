@@ -16,8 +16,8 @@ int main() {
     ll.printList();
     PRINT("------------------");
     ll.pop();
-    //ll.pop();
-    //ll.pop();
+    ll.pop();
+    ll.pop();
     ll.printList();
     PRINT("------------------");
     ll.add(10);
