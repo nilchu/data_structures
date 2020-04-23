@@ -5,14 +5,14 @@ namespace nilchu {
 
     class Deque {
         public:
-            virtual void push();
-            virtual void pop();
+            virtual void push(int data) {};
+            virtual void pop(int data) {};
     };
 
     class Queue {
         public:
-            virtual void add();
-            virtual void remove();
+            virtual void add(int data) {};
+            virtual void remove(int data) {};
     };
 
     class Node {
@@ -28,34 +28,35 @@ namespace nilchu {
     };
 
 
-    class LinkedList: public Deque, Queue {
+    class LinkedList: public Deque, public Queue {
         public:
-            Node* root;
+            Node* root = nullptr;
         LinkedList() {};
         LinkedList(Node* root) {
             this->root = root;
         }
-
-        void push(int data) {
+        public:
+        void push(int data) override {
             Node* new_node = new Node();
             new_node->data = data;
             new_node->next = this->root;
             this->root = new_node;
-        }
+        };
 
-        void pop() {
+        void pop(int data) override {
 
-        }
+        };
 
-        void add() {
+        void add(int data) override {
 
-        }
+        };
 
-        void remove() {
+        void remove(int data) override {
 
-        }
+        };
 
-        void printList(Node* n) {
+        void printList() {
+            Node* n = this->root;
             while(n != NULL) {
                 PRINT(n->data);
                 n = n->next;
