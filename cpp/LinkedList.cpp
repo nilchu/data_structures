@@ -50,7 +50,11 @@ namespace nilchu {
         };
 
         void add(int data) override {
-            Node* n = this->root;
+            if(!this->root) {
+                this->root = new Node(data);
+                return;
+            }
+            Node *n = this->root;
 
             while(n->next != NULL) {
                 n = n->next;
