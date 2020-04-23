@@ -55,7 +55,6 @@ namespace nilchu {
             }
 
             n->next = new Node(data);
-            delete n;
         };
 
         void remove(int data) override {
