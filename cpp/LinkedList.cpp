@@ -6,7 +6,7 @@ namespace nilchu {
     class Deque {
         public:
             virtual void push(int data) {};
-            virtual void pop(int data) {};
+            virtual void pop() {};
     };
 
     class Queue {
@@ -43,8 +43,8 @@ namespace nilchu {
             this->root = new_node;
         };
 
-        void pop(int data) override {
-
+        void pop() override {
+            this->root = this->root->next;
         };
 
         void add(int data) override {

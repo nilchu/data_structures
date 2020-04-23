@@ -11,5 +11,8 @@ int main() {
     ll.push(2);
     ll.push(1);
 
+
+    ll.printList();
+    ll.pop();
     ll.printList();
 };
