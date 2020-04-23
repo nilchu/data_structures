@@ -13,6 +13,11 @@ int main() {
 
 
     ll.printList();
+    PRINT("------------------");
     ll.pop();
+    ll.printList();
+    PRINT("------------------");
+    ll.add(10);
+    ll.add(20);
     ll.printList();
 };

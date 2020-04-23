@@ -48,7 +48,14 @@ namespace nilchu {
         };
 
         void add(int data) override {
+            Node* n = this->root;
 
+            while(n->next != NULL) {
+                n = n->next;
+            }
+
+            n->next = new Node(data);
+            delete n;
         };
 
         void remove(int data) override {
