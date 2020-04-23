@@ -21,4 +21,8 @@ int main() {
     ll.add(20);
     ll.add(30);
     ll.printList();
+    PRINT("------------------");
+    ll.remove(3);
+    ll.remove(10);
+    ll.printList();
 };

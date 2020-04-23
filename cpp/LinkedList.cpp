@@ -58,7 +58,13 @@ namespace nilchu {
         };
 
         void remove(int data) override {
+            Node* n = this->root;
+            
+            while(n->next->data != data) {
+                n = n->next;
+            }
 
+            n->next = n->next->next;
         };
 
         void printList() {
