@@ -30,5 +30,11 @@ int main() {
     Deque* dq = new LinkedList();
     dq->push(1000);
     dq->printList();
+
+    PRINT("------------------");
+
+    Queue* qu = new LinkedList();
+    (*qu).add(10000); // dot-notation as alternative to -> operator used above in Deque example
+    (*qu).printList(); 
     
 };
