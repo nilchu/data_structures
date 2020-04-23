@@ -5,16 +5,16 @@ namespace nilchu {
 
     class Deque {
         public:
-            virtual void push(int data) {};
-            virtual void pop() {};
-            virtual void printList() {};
+            virtual void push(int data) = 0;
+            virtual void pop() = 0;
+            virtual void printList() = 0;
     };
 
     class Queue {
         public:
-            virtual void add(int data) {};
-            virtual void remove(int data) {};
-            virtual void printList() {};
+            virtual void add(int data) = 0;
+            virtual void remove(int data) = 0;
+            virtual void printList() = 0;
     };
 
     class Node {
